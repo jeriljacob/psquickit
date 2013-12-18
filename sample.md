@@ -55,7 +55,7 @@ Web browser.
 
 Click API Key link at top right corner > Add New Application > Fill the form with mandatory details > Click Add Application button > note the **API Key** and **Secret Key** > Click Done button
 
-![](images\Step1.png)
+![](images/Step1.png)
 
 
 # Step2: Install Mule Box Connector from update Site #
@@ -75,7 +75,7 @@ Click API Key link at top right corner > Add New Application > Fill the form wit
 
 - Follow installation steps.
 
-![](images\Step2.png)
+![](images/Step2.png)
 
 # Step3: Create Demo project #
 
@@ -86,12 +86,12 @@ Click API Key link at top right corner > Add New Application > Fill the form wit
 
 - Type Demo_LinkedIn as a project name and click Next
 
-![](images\Step3_1.png)
+![](images/Step3_1.png)
 
 
 Accept default values on the next screen of project creation wizard and click **Finish.**
 
-![](images\Step3_2.png)
+![](images/Step3_2.png)
 
 
 # Step4: Add Global Elements #
@@ -104,14 +104,14 @@ Accept default values on the next screen of project creation wizard and click **
 
 - Click on Create button and add LinkedIn to the configuration.
 
-![](images\Step4_1.png)
+![](images/Step4_1.png)
 
 
 - Set LinkedIn Connector parameters as displayed on the following screenshots.
 
-![](images\Step4_2.png)
+![](images/Step4_2.png)
 
-![](images\Step4_3.png)
+![](images/Step4_3.png)
 
 # Step5. Create authorize flow. #
 
@@ -123,12 +123,12 @@ Accept default values on the next screen of project creation wizard and click **
 
 - Name the new flow authorize. It can be done by right-clicking on flow's header and selecting Rename from context menu.
 
-![](images\Step5_1.png)
+![](images/Step5_1.png)
 
 
 - Add HTTP Endpoint to your flow by dragging it from the palette. Double click it to display properties and enter auth as a path value.
 
-![](images\Step5_2.png)
+![](images/Step5_2.png)
 
 
 - Add LinkedIn Connector to the flow by dragging it from the palette.
@@ -136,7 +136,7 @@ Accept default values on the next screen of project creation wizard and click **
 Double click it to show connector properties and select **LinkedIn** in Config Reference drop-down.
 
 
-![](images\Step5_3.png)
+![](images/Step5_3.png)
 
 Next, we need to provide values for box.clientId and box.clientSecret parameters.
 
@@ -144,7 +144,7 @@ Next, we need to provide values for box.clientId and box.clientSecret parameters
 
 - Copy values from your application settings on Developer.linkedin.com (see Step 1) and put to src/main/app/flows/mule-app.properties file.
 
-![](images\Step5_4.png)
+![](images/Step5_4.png)
 
 
 # Step6: Run Demo project #
@@ -152,13 +152,13 @@ Next, we need to provide values for box.clientId and box.clientSecret parameters
 
 - Right Click on flows/Demo-LinkedIn.mflow > Run As/Mule Application.
 
-![](images\Step6_1.png)
+![](images/Step6_1.png)
 
-![](images\Step6_2.png)
+![](images/Step6_2.png)
 
 # Step7: Test Authorize Flow #
 
-![](images\Step7_1.png)
+![](images/Step7_1.png)
 
 
 
@@ -182,7 +182,7 @@ Next, we need to provide values for box.clientId and box.clientSecret parameters
 
 - You should be redirected to http://localhost:8080/... and see callback code in your browser.
 
-![](images\Step7_2.png)
+![](images/Step7_2.png)
 
 
 
@@ -194,27 +194,27 @@ Next, we need to provide values for box.clientId and box.clientSecret parameters
 
 - Add a new flow by dragging it from the palette and name it **getprofileByurl**.
 
-![](images\Step8_1.png)
+![](images/Step8_1.png)
 
 
 
 - Add HTTP endpoint to the new flow similar to Step 5 but set its path to **getprofileByurl**.
 
-![](images\Step8_2.png)
+![](images/Step8_2.png)
 
 
 
 - Add LinkedIn connector to the new flow and set the values:
 
-![](images\Step8_3.png)
+![](images/Step8_3.png)
 
 - Select Create Object Manually and click on the button to add parameters that needs to be retrieved from the profile:
 
-![](images\Step8_4.png)
+![](images/Step8_4.png)
 
 - Add **Object to JSON** to the flow to retrieve values in JSON format
 
-![](images\Step8_5.png)
+![](images/Step8_5.png)
 
 
 # Step9: Test Get Profile Flow #
@@ -225,7 +225,7 @@ Next, we need to provide values for box.clientId and box.clientSecret parameters
 
 - Now, open url **http://localhost:8081/getprofileByurl** and you should receive the JSON response like this
 
-![](images\Step9_1.png)
+![](images/Step9_1.png)
 
 
 # Step10: Create Post Share Flow #
@@ -234,14 +234,14 @@ Next, we need to provide values for box.clientId and box.clientSecret parameters
 
 - Add a new flow by dragging it from the palette and name it postshare.
 
-![](images\Step10_1.png)
+![](images/Step10_1.png)
 
 
 
 -  Add HTTP endpoint to the new flow similar to Step 5 but set its path to postshare.
 
 
-![](images\Step10_2.png)
+![](images/Step10_2.png)
 
 
 
@@ -249,15 +249,15 @@ Next, we need to provide values for box.clientId and box.clientSecret parameters
 -  Add LinkedIn connector to the new flow and set the values:
 
 
-![](images\Step10_3.png)
+![](images/Step10_3.png)
 
 
 
 -  Add 'rw_nus'to Global LinkedIn properties:
 
-![](images\Step10_4.png)
+![](images/Step10_4.png)
 
-![](images\Step10_5.png)
+![](images/Step10_5.png)
 
 # Step11: Test Post Share Flow #
 
@@ -269,11 +269,11 @@ Next, we need to provide values for box.clientId and box.clientSecret parameters
 
 - open url http://localhost:8081/postshare and you should receive the response like this
 
-![](images\Step11_1.png)
+![](images/Step11_1.png)
 
 - Login to your linkedin account and you should have the below post
 
-![](images\Step11_2.png)
+![](images/Step11_2.png)
 
 # Flow XML #
 
