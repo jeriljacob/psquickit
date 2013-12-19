@@ -1,38 +1,38 @@
-[Purpose](#Purpose)
+[Purpose](#purpose)
 
-[Prerequisites](#Prerequisites)
+[Prerequisites](#prerequisites)
 
-[Step 1: Create LinkedIn Developer account](#Step1)
+[Step 1: Create LinkedIn Developer account](#step-1-create-linkedin-developer-account)
 
-[Step 2: Install Mule Box Connector from Update Site](#Step2)
+[Step 2: Install Mule LinkedIn Connector from Update Site](#step-2-install-mule-linkedin-connector-from-update-site)
 
-[Step 3: Create Demo Project](#Step3)
+[Step 3: Create Demo Project](#step-3-create-demo-project)
 
-[Step 4: Add Global Elements](#Step4)
+[Step 4: Add Global Elements](#step-4-add-global-elements)
 
-[Step 5: Create Authorize Flow](#Step5)
+[Step 5: Create Authorize Flow](#step-5-create-authorize-flow)
 
-[Step 6: Run Demo project](#Step6)
+[Step 6: Run Demo project](#step-6-run-demo-project)
 
-[Step 7: Test Authorize Flow](#Step7)
+[Step 7: Test Authorize Flow](#step-7-test-authorize-flow)
 
-[Step 8: Create Get Profile Flow](#Step8)
+[Step 8: Create Get Profile Flow](#step-8-create-get-profile-flow)
 
-[Step 9: Test Get Profile Flow](Step9)
+[Step 9: Test Get Profile Flow](#step-9-test-get-profile-flow)
 
-[Step 10: Create Post Share Flow](#Step10)
+[Step 10: Create Post Share Flow](#step-10-create-post-share-flow)
 
-[Step 11: Test Post Share Flow](#Step11)
+[Step 11: Test Post Share Flow](#step-11-test-post-share-flow)
 
-[Flow XML](Flow)
+[Flow XML](#flow-xml)
 
-[Other Resources](Other)
+[Other Resources](#other-resources)
 
-# Purpose #
+### Purpose
 
 This document provides detailed instructions on how to install MuleSoft's LinkedIn connector and demonstrates how to build and run simple demo application that uses this connector.
 
-# Prerequisites #
+### Prerequisites
 
 In order to build and run this project you'll need:
 
@@ -42,7 +42,7 @@ In order to build and run this project you'll need:
 
 Web browser.
 
-# Step1: Create LinkedIn Developer account #
+### Step 1: Create LinkedIn Developer account
 
 
 
@@ -53,23 +53,23 @@ Web browser.
 - Go to [http://developer.linkedin.com.](http://developer.linkedin.com/. "http://developer.linkedin.com/.")
 
 
-Click API Key link at top right corner > Add New Application > Fill the form with mandatory details > Click Add Application button > note the **API Key** and **Secret Key** > Click Done button
+**Click API Key** link at top right corner > **Add New Application** > Fill the form with mandatory details > Click **Add Application button** > note the **API Key** and **Secret Key** > Click **Done button**.
 
 ![](images/Step1.png)
 
 
-# Step2: Install Mule Box Connector from update Site #
+### Step 2: Install Mule LinkedIn Connector from update Site
 
 
 
-- In Mule Studio select **Help > Install New Software**....
+- In Mule Studio select **Help > Install New Software...**.
 
 
 
-- Select ****MuleStudio Cloud Connectors Update Site** in **Work With** drop-down.
+- Select **MuleStudio Cloud Connectors Update Site** in **Work With** drop-down.
 
 
-- Check **Mule LinkedIn Cloud Connector Mule Studio Extension** from Community folder and click **Next.**
+- Check **Mule LinkedIn Cloud Connector Mule Studio Extension** from Community folder and click **Next**.
 
 
 
@@ -77,32 +77,32 @@ Click API Key link at top right corner > Add New Application > Fill the form wit
 
 ![](images/Step2.png)
 
-# Step3: Create Demo project #
+### Step 3: Create Demo project
 
 
 
-- Run Mule Studio and select File > New > Mule Project menu item.
+- Run Mule Studio and select **File > New > Mule Project** menu item.
 
 
-- Type Demo_LinkedIn as a project name and click Next
+- Type **Demo_LinkedIn** as a project name and click **Next**.
 
 ![](images/Step3_1.png)
 
 
-Accept default values on the next screen of project creation wizard and click **Finish.**
+Accept default values on the next screen of project creation wizard and click **Finish**.
 
 ![](images/Step3_2.png)
 
 
-# Step4: Add Global Elements #
+### Step 4: Add Global Elements
 
 
 
-- Double click on **src/main/app/Demo_LinkedIn.xml** to open it, select **Global Elements** tab in view.
+- Double click on **src/main/app/Demo_LinkedIn.xml** to Open it, select **Global Elements** tab in view.
 
 
 
-- Click on Create button and add LinkedIn to the configuration.
+- Click on **Create button** and add **LinkedIn** to the configuration.
 
 ![](images/Step4_1.png)
 
@@ -113,53 +113,52 @@ Accept default values on the next screen of project creation wizard and click **
 
 ![](images/Step4_3.png)
 
-# Step5. Create authorize flow. #
+### Step 5: Create authorize flow
 
 
 
-- Switch to Message Flow tab and add a new flow by dragging it from the palette.
+- Switch to **Message Flow** tab and add a new flow by dragging it from the palette.
 
 
 
-- Name the new flow authorize. It can be done by right-clicking on flow's header and selecting Rename from context menu.
+- Name the new flow **authorize**. It can be done by right-clicking on flow's header and selecting **Rename** from context menu.
 
 ![](images/Step5_1.png)
 
 
-- Add HTTP Endpoint to your flow by dragging it from the palette. Double click it to display properties and enter auth as a path value.
+- Add **HTTP Endpoint** to your flow by dragging it from the palette. Double click it to display properties and enter **auth** as a path value.
 
 ![](images/Step5_2.png)
 
 
-- Add LinkedIn Connector to the flow by dragging it from the palette.
+- Add **LinkedIn Connector** to the flow by dragging it from the palette.
 
-Double click it to show connector properties and select **LinkedIn** in Config Reference drop-down.
+Double click it to show connector properties and select **LinkedIn** in **Config Reference** drop-down.
 
 
 ![](images/Step5_3.png)
 
-Next, we need to provide values for box.clientId and box.clientSecret parameters.
+Next, we need to provide values for **Api Key** and **Api Secret** parameters.
 
 
 
-- Copy values from your application settings on Developer.linkedin.com (see Step 1) and put to src/main/app/flows/mule-app.properties file.
+- Copy values from your application settings on Developer.linkedin.com (see Step 1) and put to **src/main/app/flows/mule-app.properties file**.
 
 ![](images/Step5_4.png)
 
 
-# Step6: Run Demo project #
+### Step 6: Run Demo project
 
 
-- Right Click on flows/Demo-LinkedIn.mflow > Run As/Mule Application.
+- Right Click on **flows/Demo_LinkedIn.mflow > Run As/Mule Application**.
 
 ![](images/Step6_1.png)
 
 ![](images/Step6_2.png)
 
-# Step7: Test Authorize Flow #
+### Step 7: Test Authorize Flow
 
 ![](images/Step7_1.png)
-
 
 
 
@@ -168,15 +167,11 @@ Next, we need to provide values for box.clientId and box.clientSecret parameters
 
 
 
-- You should be redirected to authorization screen at LinkedIn.com https://www.linkedin.com/uas/oauth/authorize?oauth_token=75--166b5603-822e-4feb-a62e-cb80949c3191
+- You should be redirected to authorization screen at LinkedIn.com https://www.linkedin.com/uas/oauth/authorize?oauth_token=.....
 
 
 
 - Log in with your LinkedIn.com account created in Step 1.
-
-
-
-- Click Allow to let your application access your LinkedIn.com account.
 
 
 
@@ -186,10 +181,9 @@ Next, we need to provide values for box.clientId and box.clientSecret parameters
 
 
 
-- Stop mule server by clicking Terminate icon in console.
+- Stop mule server by clicking **Terminate** icon in console.
 
-# Step8: Create Get Profile Flow #
-
+### Step 8: Create Get Profile Flow
 
 
 - Add a new flow by dragging it from the palette and name it **getprofileByurl**.
@@ -200,7 +194,7 @@ Next, we need to provide values for box.clientId and box.clientSecret parameters
 
 - Add HTTP endpoint to the new flow similar to Step 5 but set its path to **getprofileByurl**.
 
-![](images/Step8_2.png)
+![](Images\Step8_2.png)
 
 
 
@@ -212,27 +206,27 @@ Next, we need to provide values for box.clientId and box.clientSecret parameters
 
 ![](images/Step8_4.png)
 
-- Add **Object to JSON** to the flow to retrieve values in JSON format
+- Add **Object to JSON** to the flow to retrieve values in JSON format.
 
 ![](images/Step8_5.png)
 
 
-# Step9: Test Get Profile Flow #
+### Step 9: Test Get Profile Flow
 
 
 
-- Run demo project as explained in Step 6 and open URL to authorize  http://localhost:8081/auth and follow the procedure to login to account as in Step 7
+- Run demo project as explained in Step 6 and Open URL to authorize  **http://localhost:8081/auth** and follow the procedure to login to account as in Step 7.
 
-- Now, open url **http://localhost:8081/getprofileByurl** and you should receive the JSON response like this
+- Now, Open url **http://localhost:8081/getprofileByurl** and you should receive the JSON response like this.
 
 ![](images/Step9_1.png)
 
 
-# Step10: Create Post Share Flow #
+### Step 10: Create Post Share Flow
 
 
 
-- Add a new flow by dragging it from the palette and name it postshare.
+- Add a new flow by dragging it from the palette and name it **postshare**.
 
 ![](images/Step10_1.png)
 
@@ -249,33 +243,33 @@ Next, we need to provide values for box.clientId and box.clientSecret parameters
 -  Add LinkedIn connector to the new flow and set the values:
 
 
-![](images/Step10_3.png)
+![](Images\Step10_3.png)
 
 
 
--  Add 'rw_nus'to Global LinkedIn properties:
+-  Add **rw_nus** to Global LinkedIn properties:
 
 ![](images/Step10_4.png)
 
 ![](images/Step10_5.png)
 
-# Step11: Test Post Share Flow #
+### Step 11: Test Post Share Flow
 
 
 
--  Run demo project as explained in Step 6 and open URL to authorize http://localhost:8081/auth and follow the procedure to login to account as in Step 7
+-  Run demo project as explained in Step 6 and Open URL to authorize http://localhost:8081/auth and follow the procedure to login to account as in Step 7.
 
 
 
-- open url http://localhost:8081/postshare and you should receive the response like this
+- Open url http://localhost:8081/postshare and you should receive the response like this.
 
 ![](images/Step11_1.png)
 
-- Login to your linkedin account and you should have the below post
+- Login to your linkedin account and you should have the below post.
 
 ![](images/Step11_2.png)
 
-# Flow XML #
+### Flow XML
 
 The final flow XML should look like:
 
@@ -296,7 +290,7 @@ The final flow XML should look like:
     </flow>
     <flow name="getprofileByurl" doc:name="getprofileByurl">
         <http:inbound-endpoint exchange-pattern="request-response" host="localhost" port="8081" path="getprofileByurl" doc:name="HTTP"/>
-        <linkedin:get-profile-by-url config-ref="LinkedIn" url="http://in.linkedin.com/pub/dhruva-pathak/45/a30/4b5" profileType="PUBLIC" doc:name="LinkedIn">
+        <linkedin:get-profile-by-url config-ref="LinkedIn" url="http://in.linkedin.com/pub/h*****-k****/45/a30/4b5" profileType="PUBLIC" doc:name="LinkedIn">
             <linkedin:profile-fields>
                 <linkedin:profile-field>FIRST_NAME</linkedin:profile-field>
                 <linkedin:profile-field>LAST_NAME</linkedin:profile-field>
@@ -310,7 +304,7 @@ The final flow XML should look like:
     </flow>
 	</mule>
 
-# Other Resources #
+### Other Resources
 
 For more information on:
 
