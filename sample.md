@@ -243,7 +243,7 @@ Next, we need to provide values for **Api Key** and **Api Secret** parameters.
 -  Add LinkedIn connector to the new flow and set the values:
 
 
-![](Images\Step10_3.png)
+![](images/Step10_3.png)
 
 
 
