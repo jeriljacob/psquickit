@@ -1,8 +1,10 @@
-### Inbound Properties
+
+
+The below tables list the fields that you can specify in order to retrieve a variety of information. The column 'Field name' refers to the field selectors provided by LinkedIn. The column 'Object Builder mapping in the connector' refers to the corresponding field names that you need to specify in the LinkedIn connector.
 
 [PROFILE FIELDS](http://developer.linkedin.com/documents/profile-fields#profile)
 
-**basic profile fields(r_basicprofile)**
+**Basic Profile Fields(member permission: r_basicprofile)**
 <table>
 	<tr>
 		<th>Field name </th>
@@ -105,7 +107,7 @@
 
 </table>
 
-**Full Profile Fields(r_fullprofile)**
+**Full Profile Fields (member permission: r_fullprofile)**
 
 <table>
 <tr>
@@ -248,6 +250,129 @@ MEMBER_URL_NAME
 </td>
 </tr>
 </table>
+
+**Contact Info Fields (member permission: r_contactinfo)**
+
+<table>
+<th>Field name</th>
+<th>Object Builder mapping in the connector</th>
+<tr>
+<td>phone-numbers</td>
+<td>PHONE_NUMBERS</td>
+</tr>
+<tr>
+<td>im-accounts</td>
+<td>IM_ACCOUNTS</td>
+</tr>
+<tr>
+<td>main-address</td>
+<td>MAIN_ADDRESS</td>
+</tr>
+<tr>
+<td>twitter-accounts</td>
+<td>TWITTER_ACCOUNTS</td>
+</tr>
+</table>
+
+**Connection Fields (member permission: r_network )**
+
+</style><table class="tableizer-table">
+<tr class="tableizer-firstrow"><th>Field name</th><th>Object Builder mapping in the connector</th></tr>
+ <tr><td>connections</td><td>CONNECTIONS</td></tr>
+</table>
+
+**Positions**
+</style><table class="tableizer-table">
+<tr class="tableizer-firstrow"><th>Field name </th><th>Object Builder mapping in the connector</th></tr>
+ <tr><td>id</td><td>POSITIONS\_ID</td></tr>
+ <tr><td>title</td><td>POSITIONS\_TITLE</td></tr>
+ <tr><td>summary</td><td>POSITIONS\_SUMMARY</td></tr>
+ <tr><td>start-date</td><td>POSITIONS\_START\_DATE</td></tr>
+ <tr><td>end-date</td><td>POSITIONS\_END\_DATE</td></tr>
+ <tr><td>is-current</td><td>POSITIONS\_IS\_CURRENT</td></tr>
+ <tr><td>company</td><td>POSITIONS\_COMPANY</td></tr>
+</table>
+
+**Publications**
+</style><table class="tableizer-table">
+<tr class="tableizer-firstrow"><th>Field name </th><th>Object Builder mapping in the connector</th></tr>
+ <tr><td>id</td><td>PUBLICATIONS\_ID</td></tr>
+ <tr><td>title</td><td>PUBLICATIONS\_TITLE</td></tr>
+ <tr><td>publisher:(name)</td><td>PUBLICATIONS\_PUBLISHER\_NAME</td></tr>
+ <tr><td>authors:(id)</td><td>PUBLICATIONS\_AUTHORS\_ID</td></tr>
+ <tr><td>authors:(name)</td><td>PUBLICATIONS\_AUTHORS\_NAME</td></tr>
+ <tr><td>authors:(person)</td><td>PUBLICATIONS\_AUTHORS\_PERSON</td></tr>
+ <tr><td>date</td><td>PUBLICATIONS\_DATE</td></tr>
+ <tr><td>url</td><td>PUBLICATIONS\_URL</td></tr>
+ <tr><td>summary</td><td>PUBLICATIONS\_SUMMARY</td></tr>
+</table>
+
+**Patents**
+</style><table class="tableizer-table">
+<tr class="tableizer-firstrow"><th>Field name </th><th>Object Builder mapping in the connector</th></tr>
+ <tr><td>id</td><td>PATENTS\_ID</td></tr>
+ <tr><td>title</td><td>PATENTS\_TITLE</td></tr>
+ <tr><td>summary</td><td>PATENTS\_SUMMARY</td></tr>
+ <tr><td>number</td><td>PATENTS\_NUMBER</td></tr>
+ <tr><td>status:(id)</td><td>PATENTS\_STATUS\_ID</td></tr>
+ <tr><td>status:(name)</td><td>PATENTS\_STATUS\_NAME</td></tr>
+ <tr><td>office:(name)</td><td>PATENTS\_OFFICE\_NAME</td></tr>
+ <tr><td>inventors:(id)</td><td>PATENTS\_INVENTORS\_ID</td></tr>
+ <tr><td>inventors:(name)</td><td>PATENTS\_INVENTORS\_NAME</td></tr>
+ <tr><td>inventors:(person)</td><td>PATENTS\_INVENTORS\_PERSON</td></tr>
+ <tr><td>date</td><td>PATENTS\_DATE</td></tr>
+ <tr><td>url</td><td>PATENTS\_URL</td></tr>
+</table>
+
+**Languages**
+</style><table class="tableizer-table">
+<tr class="tableizer-firstrow"><th>Field name </th><th>Object Builder mapping in the connector</th></tr>
+ <tr><td>id</td><td>LANGUAGES\_ID</td></tr>
+ <tr><td>language:(name)</td><td>LANGUAGES\_LANGUAGE\_NAME</td></tr>
+ <tr><td>proficiency:(level)</td><td>LANGUAGES\_PROFICIENCY\_LEVEL</td></tr>
+ <tr><td>proficiency:(name)</td><td>LANGUAGES\_PROFICIENCY\_NAME</td></tr>
+</table>
+
+**Skills**
+</style><table class="tableizer-table">
+<tr class="tableizer-firstrow"><th>Field name </th><th>Object Builder mapping in the connector</th></tr>
+ <tr><td>id</td><td>SKILLS\_ID</td></tr>
+ <tr><td>skill:(name)</td><td>SKILLS\_SKILL\_NAME</td></tr>
+</table>
+
+**Certifications**
+</style><table class="tableizer-table">
+<tr class="tableizer-firstrow"><th>Field name </th><th>Object Builder mapping in the connector</th></tr>
+ <tr><td>id</td><td>CERTIFICATIONS\_ID</td></tr>
+ <tr><td>name</td><td>CERTIFICATIONS\_NAME</td></tr>
+ <tr><td>authority:(name)</td><td>CERTIFICATIONS\_AUTHORITY\_NAME</td></tr>
+ <tr><td>number</td><td>CERTIFICATIONS\_NUMBER</td></tr>
+ <tr><td>start-date</td><td>CERTIFICATIONS\_START\_DATE</td></tr>
+ <tr><td>end-date</td><td>CERTIFICATIONS\_END\_DATE</td></tr>
+</table>
+
+**Educations**
+</style><table class="tableizer-table">
+<tr class="tableizer-firstrow"><th>Field name </th><th>Object Builder mapping in the connector</th></tr>
+ <tr><td>id</td><td>EDUCATIONS\_ID</td></tr>
+ <tr><td>school-name</td><td>EDUCATIONS\_SCHOOL\_NAME</td></tr>
+ <tr><td>field-of-study</td><td>EDUCATIONS\_FIELD\_OF\_STUDY</td></tr>
+ <tr><td>start-date</td><td>EDUCATIONS\_START\_DATE</td></tr>
+ <tr><td>end-date</td><td>EDUCATIONS\_END\_DATE</td></tr>
+ <tr><td>degree</td><td>EDUCATIONS\_DEGREE</td></tr>
+ <tr><td>activities</td><td>EDUCATIONS\_ACTIVITIES</td></tr>
+ <tr><td>notes</td><td>EDUCATIONS\_NOTES</td></tr>
+</table>
+
+**Recommendations**
+</style><table class="tableizer-table">
+<tr class="tableizer-firstrow"><th>Field name </th><th>Object Builder mapping in the connector</th></tr>
+ <tr><td>id</td><td>RECOMMENDATIONS\_RECEIVED\_ID</td></tr>
+ <tr><td>recommendation-type</td><td>RECOMMENDATIONS\_RECEIVED\_RECOMMENDATION\_TYPE</td></tr>
+ <tr><td>recommender</td><td>RECOMMENDATIONS\_RECEIVED\_RECOMMENDER</td></tr>
+</table>
+
+
 
 [GROUP FIELD](http://developer.linkedin.com/documents/groups-fields)
 
@@ -481,18 +606,6 @@ MEMBER_URL_NAME
 
 [COMPANY FIELDS](http://developer.linkedin.com/documents/company-lookup-api-and-fields)
 
-<style type="text/css">
-	table.tableizer-table {
-	border: 1px solid #CCC; font-family: Arial, Helvetica, sans-serif
-	font-size: 12px;
-} 
-.tableizer-table td {
-	padding: 4px;
-	margin: 3px;
-	border: 1px solid #ccc;
-}
-
-}
 </style><table class="tableizer-table">
 <tr class="tableizer-firstrow"><th>Field name </th><th>Object Builder mapping in the connector</th></tr>
  <tr><td>id</td><td>ID</td></tr>
@@ -536,17 +649,6 @@ MEMBER_URL_NAME
 
 [JOBS FIELDS](http://developer.linkedin.com/documents/job-lookup-api-and-fields)
 
-<style type="text/css">
-	table.tableizer-table {
-	border: 1px solid #CCC; font-family: Arial, Helvetica, sans-serif
-	font-size: 12px;
-} 
-.tableizer-table td {
-	padding: 4px;
-	margin: 3px;
-	border: 1px solid #ccc;
-}
-}
 </style><table class="tableizer-table">
 <tr class="tableizer-firstrow"><th>Field name </th><th>Object Builder mapping in the connector</th></tr>
  <tr><td>id</td><td>ID</td></tr>
@@ -577,19 +679,24 @@ MEMBER_URL_NAME
  <tr><td>location-description</td><td>LOCATION\_DESCRIPTION</td></tr>
 </table>
 
+[FACET FIELDS](http://developer.linkedin.com/documents/people-search-api)
+</style><table class="tableizer-table">
+<tr class="tableizer-firstrow"><th>Field name </th><th>Object Builder mapping in the connector</th></tr>
+ <tr><td>name</td><td>NAME</td></tr>
+ <tr><td>code</td><td>CODE</td></tr>
+ <tr><td>buckets</td><td>BUCKETS</td></tr>
+ <tr><td>name</td><td>BUCKET\_NAME</td></tr>
+ <tr><td>code</td><td>BUCKET\_CODE</td></tr>
+ <tr><td>count</td><td>BUCKET\_COUNT</td></tr>
+ <tr><td>selected</td><td>BUCKET\_SELECTED</td></tr>
+</table>
+
+
+
 [NETWORK UPDATE TYPES](http://developer.linkedin.com/documents/get-network-updates-and-statistics-api)
 
-<style type="text/css">
-	table.tableizer-table {
-	border: 1px solid #CCC; font-family: Arial, Helvetica, sans-serif
-	font-size: 12px;
-} 
-.tableizer-table td {
-	padding: 4px;
-	margin: 3px;
-	border: 1px solid #ccc;
-}
-}
+The below table lists the various update types for which you can retrieve information:
+
 </style><table class="tableizer-table">
 <tr class="tableizer-firstrow"><th>Field name </th><th>Object Builder mapping in the connector</th></tr>
  <tr><td>APPS</td><td>APPLICATION\_UPDATE</td></tr>
@@ -602,4 +709,25 @@ MEMBER_URL_NAME
  <tr><td>PRFX</td><td>EXTENDED\_PROFILE\_UPDATE</td></tr>
  <tr><td>RECU</td><td>RECOMMENDATION\_UPDATE</td></tr>
  <tr><td>PRFU</td><td>PROFILE\_UPDATE</td></tr>
+</table>
+
+[SEARCH PARAMETERS](http://developer.linkedin.com/documents/people-search-api)
+
+The below table lists the input parameters which you can specfiy to perform a search operation:
+</style><table class="tableizer-table">
+<tr class="tableizer-firstrow"><th>Field Name</th><th>Object Builder mapping in the connector</th></tr>
+ <tr><td>keywords</td><td>KEYWORDS</td></tr>
+ <tr><td>first-name</td><td>FIRST\_NAME</td></tr>
+ <tr><td>last-name</td><td>LAST\_NAME</td></tr>
+ <tr><td>company-name</td><td>COMPANY\_NAME</td></tr>
+ <tr><td>current-company</td><td>CURRENT\_COMPANY</td></tr>
+ <tr><td>title</td><td>TITLE</td></tr>
+ <tr><td>current-title</td><td>CURRENT\_TITLE</td></tr>
+ <tr><td>school-name</td><td>SCHOOL\_NAME</td></tr>
+ <tr><td>current-school</td><td>CURRENT\_SCHOOL</td></tr>
+ <tr><td>country-code</td><td>COUNTRY\_CODE</td></tr>
+ <tr><td>postal-code</td><td>POSTAL\_CODE</td></tr>
+ <tr><td>distance</td><td>DISTANCE</td></tr>
+ <tr><td>facet</td><td>FACET</td></tr>
+ <tr><td>facets</td><td>FACETS</td></tr>
 </table>
