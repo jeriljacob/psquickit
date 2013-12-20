@@ -4,7 +4,7 @@ The below tables list the fields that you can specify in order to retrieve a var
 
 [PROFILE FIELDS](http://developer.linkedin.com/documents/profile-fields#profile)
 
-**Basic Profile Fields(member permission: r_basicprofile)**
+**Basic Profile Fields**
 <table>
 	<tr>
 		<th>Field name </th>
@@ -107,7 +107,7 @@ The below tables list the fields that you can specify in order to retrieve a var
 
 </table>
 
-**Full Profile Fields (member permission: r_fullprofile)**
+**Full Profile Fields**
 
 <table>
 <tr>
@@ -251,7 +251,7 @@ MEMBER_URL_NAME
 </tr>
 </table>
 
-**Contact Info Fields (member permission: r_contactinfo)**
+**Contact Info Fields**
 
 <table>
 <th>Field name</th>
@@ -274,7 +274,7 @@ MEMBER_URL_NAME
 </tr>
 </table>
 
-**Connection Fields (member permission: r_network )**
+**Connection Fields**
 
 </style><table class="tableizer-table">
 <tr class="tableizer-firstrow"><th>Field name</th><th>Object Builder mapping in the connector</th></tr>
@@ -691,6 +691,20 @@ MEMBER_URL_NAME
  <tr><td>selected</td><td>BUCKET\_SELECTED</td></tr>
 </table>
 
+[FACET TYPES](http://developer.linkedin.com/documents/people-search-api#Facets)
+
+The below table lists the facet types for which you can retrieve information:
+
+</style><table class="tableizer-table">
+<tr class="tableizer-firstrow"><th>Key Name</th><th>Object Builder mapping in the connector</th></tr>
+ <tr><td>location</td><td>LOCATION</td></tr>
+ <tr><td>industry</td><td>INDUSTRY</td></tr>
+ <tr><td>network</td><td>NETWORK</td></tr>
+ <tr><td>language</td><td>LANGUAGE</td></tr>
+ <tr><td>current-company</td><td>CURRENT\_COMPANY</td></tr>
+ <tr><td>past-company</td><td>PAST\_COMPANY</td></tr>
+ <tr><td>school</td><td>SCHOOL</td></tr>
+</table>
 
 
 [NETWORK UPDATE TYPES](http://developer.linkedin.com/documents/get-network-updates-and-statistics-api)
@@ -705,7 +719,6 @@ The below table lists the various update types for which you can retrieve inform
  <tr><td>JOBS</td><td>JOB\_UPDATE</td></tr>
  <tr><td>JGRP</td><td>GROUP\_UPDATE</td></tr>
  <tr><td>PICT</td><td>PICTURE\_UPDATE</td></tr>
- <tr><td>PFOL</td><td>Not Supported</td></tr>
  <tr><td>PRFX</td><td>EXTENDED\_PROFILE\_UPDATE</td></tr>
  <tr><td>RECU</td><td>RECOMMENDATION\_UPDATE</td></tr>
  <tr><td>PRFU</td><td>PROFILE\_UPDATE</td></tr>
@@ -715,7 +728,7 @@ The below table lists the various update types for which you can retrieve inform
 
 The below table lists the input parameters which you can specfiy to perform a search operation:
 </style><table class="tableizer-table">
-<tr class="tableizer-firstrow"><th>Field Name</th><th>Object Builder mapping in the connector</th></tr>
+<tr class="tableizer-firstrow"><th>Key Name</th><th>Object Builder mapping in the connector</th></tr>
  <tr><td>keywords</td><td>KEYWORDS</td></tr>
  <tr><td>first-name</td><td>FIRST\_NAME</td></tr>
  <tr><td>last-name</td><td>LAST\_NAME</td></tr>
