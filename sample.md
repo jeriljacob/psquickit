@@ -116,16 +116,6 @@ Accept default values on the next screen of project creation wizard and click **
 ### Step 5: Create authorize flow
 
 
-
-- Switch to **Message Flow** tab and add a new flow by dragging it from the palette.
-
-
-
-- Name the new flow **authorize**. It can be done by right-clicking on flow's header and selecting **Rename** from context menu.
-
-![](images/Step5_1.png)
-
-
 - Add **HTTP Endpoint** to your flow by dragging it from the palette. Double click it to display properties and enter **auth** as a path value.
 
 ![](images/Step5_2.png)
@@ -186,12 +176,6 @@ Next, we need to provide values for **Api Key** and **Api Secret** parameters.
 ### Step 8: Create Get Profile Flow
 
 
-- Add a new flow by dragging it from the palette and name it **getprofileByurl**.
-
-![](images/Step8_1.png)
-
-
-
 - Add HTTP endpoint to the new flow similar to Step 5 but set its path to **getprofileByurl**.
 
 ![](Images\Step8_2.png)
@@ -225,13 +209,6 @@ Next, we need to provide values for **Api Key** and **Api Secret** parameters.
 ### Step 10: Create Post Share Flow
 
 
-
-- Add a new flow by dragging it from the palette and name it **postshare**.
-
-![](images/Step10_1.png)
-
-
-
 -  Add HTTP endpoint to the new flow similar to Step 5 but set its path to postshare.
 
 
@@ -243,7 +220,7 @@ Next, we need to provide values for **Api Key** and **Api Secret** parameters.
 -  Add LinkedIn connector to the new flow and set the values:
 
 
-![](images/Step10_3.png)
+![](Images\Step10_3.png)
 
 
 

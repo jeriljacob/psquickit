@@ -1,4 +1,5 @@
 
+Parameters 'Start Date' - 'End Date' and 'Start' - 'Count' need to be provided in pairs for the APIs wherever applicable.
 
 The below tables list the fields that you can specify in order to retrieve a variety of information. The column 'Field name' refers to the field selectors provided by LinkedIn. The column 'Object Builder mapping in the connector' refers to the corresponding field names that you need to specify in the LinkedIn connector.
 
@@ -110,6 +111,10 @@ The below tables list the fields that you can specify in order to retrieve a var
 **Full Profile Fields**
 
 <table>
+<tr>
+		<th>Field name </th>
+		<th>Object Builder mapping in the connector</th>
+</tr>
 <tr>
 <td>
 proposal-comments
